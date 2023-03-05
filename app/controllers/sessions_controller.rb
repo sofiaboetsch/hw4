@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
   @user = User.find_by({ "email" => params["email"] })
   if @user
     if BCrypt::Password.new(@user["password"]) == params["password"]
-      sessions["user_id"] = @user["id"]
+      session["user_id"] = @user["id"]
       flash["notice"] = "You've logged in."
       redirect_to "/places"
     else
@@ -21,7 +21,7 @@ class SessionsController < ApplicationController
 end
 
   def destroy
-    session["user_id"]=Nil
+    session["user_id"]=nil
     redirect_to "/sessions/new"
   end
 end
