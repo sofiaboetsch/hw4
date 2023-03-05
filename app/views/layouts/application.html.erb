@@ -17,7 +17,6 @@ here im trying. If log in then show... else.. -->
   <body>
      <p>
   <% if @current_user %>
-      Hey, <%= @current_user["first_name"] %>
       <%= flash["notice"] %>
         <a href="/logout">Logout</a>
   <% else %>
