@@ -1,7 +1,11 @@
 <h1>Login</h1>
 
 <%= form_with :url => "/sessions" do |form| %>
-  
+  <p>
+    <%= form.label "email" %>
+    <%= form.text_field "email" %>
+    <%= form.label "password" %>
+    <%= form.text_field "password" %>
   <p>
     <%= form.submit "Login" %>
   </p>

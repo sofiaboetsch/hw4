@@ -9,9 +9,27 @@
     <link rel="stylesheet" href="/stylesheets/application.css">
   </head>
 
+<!--I dont know why href is /login, not session/new 
+and why they are in Div instead of <p>
+also, not sure If i have to do the identification of current users and 
+else..  
+here im trying. If log in then show... else.. -->
   <body>
-    <div>
+     <p>
+  <% if @current_user %>
+      Hey, <%= @current_user["first_name"] %>
       <%= flash["notice"] %>
+        <a href="/logout">Logout</a>
+  <% else %>
+    <div>
+      <a href="/">Home</a>
+      <a href="/login">Login</a>
+      <a href="/users/new">Signup</a>
+    </div>
+  <% end %>
+</p>
+
+<!-- what was before
     </div>
     <div>
       <a href="/">Home</a>
@@ -19,6 +37,7 @@
       <a href="/login">Login</a>
       <a href="/users/new">Signup</a>
     </div>
+    --->
 
     <%= yield %>
   </body>
