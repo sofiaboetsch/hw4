@@ -17,4 +17,9 @@
   <p>
     <%= form.submit %>
   </p>
+  
+ <div class="mb-3">
+  <%= form.label "uploaded_image", :class => "form-label" %>
+  <%= form.file_field "uploaded_image", :accept => "image/png,image/jpg,image/jpeg,image/gif", :class => "form-control" %>
+</div>
 <% end %>
