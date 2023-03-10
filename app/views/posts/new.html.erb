@@ -14,12 +14,15 @@
     <%= form.label "posted_on" %>
     <%= form.date_field "posted_on" %>
   </p>
-  <p>
-    <%= form.submit %>
-  </p>
   
  <div class="mb-3">
   <%= form.label "uploaded_image", :class => "form-label" %>
   <%= form.file_field "uploaded_image", :accept => "image/png,image/jpg,image/jpeg,image/gif", :class => "form-control" %>
 </div>
+  <p>
+    <%= form.submit %>
+  </p>
+  <p>
+  <a href="/places"class="btn btn-secondary">Back to All Places</a>
+</p>
 <% end %>
