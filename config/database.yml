@@ -22,4 +22,8 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  database: sofia4tacogram_production
+  username: sofia4tacogram
+  password: <%= ENV["SOFIA4TACOGRAM_DATABASE_PASSWORD"] %>
+
