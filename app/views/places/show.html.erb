@@ -5,7 +5,7 @@
   <h1><%= @place["name"] %></h1>
 
   <% for post in @posts %>
-  <div class= "col-md-6 col-lg-3">
+  <div class= "col-md-6 col-lg-4">
       <% if post.uploaded_image.attached? %>
           <img src="<%= url_for(post.uploaded_image) %>" class="img-fluid">
         <% else %>
